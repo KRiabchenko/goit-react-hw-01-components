@@ -1,33 +1,35 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
-export const Profile = ({ user }) => { 
-    const {username, tag, location, avatar, stats} =user;
-    return <div>
-        <h2>{username}</h2>
-        <div>
-            <div>@{tag}</div>
-            <div>{location}</div>
-            <div>{avatar}</div>
-        </div>
-        <ul>
+import { ProfileStyle, Description, AvatarEl, Name, Tag, Location, Stats, Label, Quantity } from './Profile.styled';
+
+export const Profile = ({ username, tag, location, avatar, stats }) => { 
+    return <ProfileStyle>
+        <Description>
+            <AvatarEl
+            src={avatar} alt={`${username} avatar`}></AvatarEl>
+            <Name>{username}</Name>
+            <Tag>@{tag}</Tag>
+            <Location>{location}</Location> 
+        </Description>
+
+        <Stats>
             <li>
-            <span>Followers</span>
-            <span>{stats.followers}</span>
+            <Label>Followers</Label>
+            <Quantity>{stats.followers}</Quantity>
             </li>
             <li>
-            <span>Views</span>
-            <span>{stats.views}</span>
+            <Label>Views</Label>
+            <Quantity>{stats.views}</Quantity>
             </li>
             <li>
-            <span>Likes</span>
-            <span>{stats.likes}</span>
+            <Label>Likes</Label>
+            <Quantity>{stats.likes}</Quantity>
             </li>
-        </ul>
-</div>
+        </Stats>
+</ProfileStyle>
 };
 
 Profile.propTypes = {
-    user: PropTypes.shape({
         username: PropTypes.string.isRequired,
         tag: PropTypes.string.isRequired,
         location: PropTypes.string.isRequired,
@@ -37,5 +39,4 @@ Profile.propTypes = {
     views: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,
   }).isRequired,
-    })
 }
