@@ -8,8 +8,9 @@ export const ProfileStyle = styled.div`
   color: #555555;
   // border: 1px solid red;
   border-radius: 6px;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+  0px 4px 4px rgba(0, 0, 0, 0.06),
+  1px 4px 6px rgba(0, 0, 0, 0.16);
 `;
 
 export const Description = styled.div`

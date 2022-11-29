@@ -1,8 +1,23 @@
 import PropTypes from 'prop-types';
 
-import { ProfileStyle, Description, AvatarEl, Name, Tag, Location, Stats, Label, Quantity } from './Profile.styled';
+import {
+    ProfileStyle,
+    Description,
+    AvatarEl,
+    Name,
+    Tag,
+    Location,
+    Stats,
+    Label,
+    Quantity
+} from './Profile.styled';
 
-export const Profile = ({ username, tag, location, avatar, stats }) => { 
+export const Profile = ({
+    username,
+    tag,
+    location,
+    avatar,
+    stats }) => { 
     return <ProfileStyle>
         <Description>
             <AvatarEl

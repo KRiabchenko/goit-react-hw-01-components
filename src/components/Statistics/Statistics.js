@@ -1,7 +1,14 @@
 import PropTypes from 'prop-types';
 import { rendomColor } from 'utils/RandomColor';
 
-import {Section, Title, DataList, DataItem, Label, Percentage  } from './Statistics.styled';
+import {
+  Section,
+  Title,
+  DataList,
+  DataItem,
+  Label,
+  Percentage
+} from './Statistics.styled';
 
 export const Statistics = ({ title, data }) => {
   return (
@@ -19,7 +26,6 @@ export const Statistics = ({ title, data }) => {
     </Section>
   );
 };
-
 
 Statistics.propTypes = {
 title: PropTypes.string,
